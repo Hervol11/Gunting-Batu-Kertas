@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨Gunting Batu Kertas✨</title>
+    <!-- 👇 css code file 👇 -->
+    <link rel="stylesheet" href="./src/style/global.css" />
+  </head>
+  <body>
+    <div class="judul">
+      <h1>Gunting Batu Kertas</h1>
+      <img class="gbt" src="src/icons/rock-paper-scissors.png" alt="" />
+    </div>
+
+    <div class="pertandingan">
+      <div class="tempat">
+        <div class="bot">
+          <img id="bot" src="src/icons/robot.png" alt="" />
+        </div>
+        <h1 class="vs" id="vs">VS</h1>
+        <div class="pemain">
+          <img id="pemain" src="src/icons/gamer.png" alt="" />
+        </div>
+      </div>
+      <h1 class="hasil" id="hasil">AYO BERMAIN!!</h1>
+      <a href="">
+        <button id="reset">lagi?</button>
+      </a>
+    </div>
+
+    <div class="pilihan">
+      <div class="gunting" onclick="gunting()">
+        <img id="gunting" src="src/icons/scissors.png" alt="" />
+      </div>
+
+      <div class="batu" onclick="batu()">
+        <img id="batu" src="src/icons/stone.png" alt="" />
+      </div>
+
+      <div class="kertas" onclick="kertas()">
+        <img id="kertas" src="src/icons/paper.png" alt="" />
+      </div>
+    </div>
+
+    <!-- 👇 javascript code file 👇 -->
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
