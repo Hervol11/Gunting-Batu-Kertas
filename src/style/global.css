@@ -45,7 +45,6 @@ body {
 }
 
 .vs {
-  width: 250px;
   font-size: 90px;
 }
 
@@ -114,4 +113,36 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+  #pemain {
+    width: 60px;
+  }
+  #bot {
+    width: 60px;
+  }
+  #vs {
+    font-size: 40px;
+  }
+
+  #gunting {
+    width: 70px;
+  }
+  #kertas {
+    width: 70px;
+  }
+  #batu {
+    width: 70px;
+  }
+
+  .gunting {
+    margin: 0 10px;
+  }
+  .kertas {
+    margin: 0 10px;
+  }
+  .batu {
+    margin: 0 10px;
+  }
 }
