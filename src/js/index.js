@@ -1,93 +1,39 @@
-/*? no js js needed from me */
-const pemain = document.getElementById("pemain");
-const bot = document.getElementById("bot");
-const hasil = document.getElementById("hasil");
-const reset = document.getElementById("reset");
-const jurus1 = document.getElementById("gunting");
-const jurus2 = document.getElementById("batu");
-const jurus3 = document.getElementById("kertas");
+const ang1 = document.getElementById("result1");
+const ang2 = document.getElementById("result2");
+const ang3 = document.getElementById("result3");
+const ang4 = document.getElementById("result4");
+const ang5 = document.getElementById("result5");
+const ang6 = document.getElementById("result6");
 
+const absen = [];
 let klik = 0;
-let gtg = "src/icons/scissors.png";
-let bt = "src/icons/stone.png";
-let kts = "src/icons/paper.png";
+let i = 0;
 
-reset.style.display = "none";
-
-function gunting() {
-  klik = Math.floor(Math.random() * 3) + 1;
-  reset.style.display = "block";
-  pemain.src = "src/icons/scissors.png";
-
-  if (klik == 1) {
-    bot.src = gtg;
-  } else if (klik == 2) {
-    bot.src = bt;
-  } else if (klik == 3) {
-    bot.src = kts;
+function randomnumber() {
+  while (absen.length < 36) {
+    klik = Math.floor(Math.random() * 36) + 1;
+    if (!absen.includes(klik)) {
+      absen.push(klik);
+    }
   }
-
-  jurus1.style.display = "none";
-  jurus2.style.display = "none";
-  jurus3.style.display = "none";
-
-  if (bot.src.includes("scissors") && pemain.src.includes("scissors")) {
-    hasil.textContent = "seri!";
-  } else if (bot.src.includes("stone") && pemain.src.includes("scissors")) {
-    hasil.textContent = "kamu kalah!";
-  } else if (bot.src.includes("paper") && pemain.src.includes("scissors")) {
-    hasil.textContent = "kamu menang!";
-  }
+  return absen;
 }
 
-function batu() {
-  klik = Math.floor(Math.random() * 3) + 1;
-  reset.style.display = "block";
-  pemain.src = "src/icons/stone.png";
+function kel() {
+  randomnumber();
+  i += 1;
 
-  if (klik == 1) {
-    bot.src = gtg;
-  } else if (klik == 2) {
-    bot.src = bt;
-  } else if (klik == 3) {
-    bot.src = kts;
-  }
+  let anggota1 = absen.slice(0, 5).join(", ");
+  let anggota2 = absen.slice(6, 11).join(", ");
+  let anggota3 = absen.slice(12, 17).join(", ");
+  let anggota4 = absen.slice(18, 23).join(", ");
+  let anggota5 = absen.slice(24, 29).join(", ");
+  let anggota6 = absen.slice(30, 35).join(", ");
 
-  jurus1.style.display = "none";
-  jurus2.style.display = "none";
-  jurus3.style.display = "none";
-
-  if (bot.src.includes("scissors") && pemain.src.includes("stone")) {
-    hasil.textContent = "kamu menang!";
-  } else if (bot.src.includes("stone") && pemain.src.includes("stone")) {
-    hasil.textContent = "kamu seri!";
-  } else if (bot.src.includes("paper") && pemain.src.includes("stone")) {
-    hasil.textContent = "kamu kalah!";
-  }
-}
-
-function kertas() {
-  klik = Math.floor(Math.random() * 3) + 1;
-  reset.style.display = "block";
-  pemain.src = "src/icons/paper.png";
-
-  if (klik == 1) {
-    bot.src = gtg;
-  } else if (klik == 2) {
-    bot.src = bt;
-  } else if (klik == 3) {
-    bot.src = kts;
-  }
-
-  jurus1.style.display = "none";
-  jurus2.style.display = "none";
-  jurus3.style.display = "none";
-
-  if (bot.src.includes("scissors") && pemain.src.includes("paper")) {
-    hasil.textContent = "kamu kalah!";
-  } else if (bot.src.includes("stone") && pemain.src.includes("paper")) {
-    hasil.textContent = "kamu menang!";
-  } else if (bot.src.includes("paper") && pemain.src.includes("paper")) {
-    hasil.textContent = "kamu seri!";
-  }
+  ang1.textContent = "Anggota :" + anggota1;
+  ang2.textContent = "Anggota :" + anggota2;
+  ang3.textContent = "Anggota :" + anggota3;
+  ang4.textContent = "Anggota :" + anggota4;
+  ang5.textContent = "Anggota :" + anggota5;
+  ang6.textContent = "Anggota :" + anggota6;
 }

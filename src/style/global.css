@@ -7,142 +7,143 @@ body {
   box-sizing: border-box;
 }
 
-.judul {
+body {
+  background-color: #394c77;
   width: 100%;
   height: max-content;
-  margin: 50px 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
 }
 
-.gbt {
-  width: 100px;
-}
-
-.pertandingan {
-  width: 100%;
-  height: max-content;
-  margin: 50px 0;
+.semua {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
 }
 
-.tempat {
-  width: 100%;
-  height: max-content;
-  margin: 50px 0;
+.jdl-u {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-wrap: wrap;
-}
-
-.vs {
-  font-size: 90px;
-}
-
-#bot {
-  width: 150px;
-}
-
-#pemain {
-  width: 150px;
-}
-
-.pilihan {
-  width: 100%;
   height: max-content;
-  margin: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-}
-
-.gunting {
-  margin: 10px 25px;
-  width: max-content;
+  background-color: #780d0d;
   height: max-content;
-  border: 3px solid black;
-  cursor: pointer;
-}
-.batu {
-  margin: 10px 25px;
-  width: max-content;
-  height: max-content;
-  border: 3px solid black;
-  cursor: pointer;
-}
-.kertas {
-  margin: 10px 25px;
-  width: max-content;
-  height: max-content;
-  border: 3px solid black;
-  cursor: pointer;
-}
-
-#gunting {
-  width: 150px;
-}
-#batu {
-  width: 150px;
-}
-#kertas {
-  width: 150px;
-}
-
-#reset {
-  font-size: 20px;
-  background-color: skyblue;
-  cursor: pointer;
-  padding: 5px;
-}
-
-#reset:hover {
-  background-color: aquamarine;
-  transition: all 0.3s;
+  padding: 10px 0;
 }
 
 a {
+  list-style-type: none;
   text-decoration: none;
 }
 
+.j1 {
+  margin-right: 5px;
+  color: #ffffff;
+}
+.j2 {
+  margin-left: 5px;
+  color: #e6ff00;
+}
+
+li {
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.jdl1 {
+  color: #00ff00;
+}
+
+.jdl2 {
+  color: #00ff9d;
+}
+
+.prg {
+  color: #ffffff;
+}
+
+.btn {
+  background-color: #ffbb00;
+  padding: 15px;
+  width: max-content;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: rgb(163, 93, 53);
+  color: #ffffff;
+}
+
+.all {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: auto;
+}
+
+.content {
+  width: 70%;
+}
+
+.dasar {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.kel6 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kelompok {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.kel {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #780d0d;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  top: auto;
+  padding: 10px 0;
+  color: #e6ff00;
+}
+
 @media screen and (max-width: 450px) {
-  #pemain {
-    width: 60px;
-  }
-  #bot {
-    width: 60px;
-  }
-  #vs {
-    font-size: 40px;
+  h1 {
+    font-size: 25px;
   }
 
-  #gunting {
-    width: 70px;
+  h2 {
+    font-size: 22px;
   }
-  #kertas {
-    width: 70px;
+  p {
+    font-size: 18px;
   }
-  #batu {
-    width: 70px;
-  }
-
-  .gunting {
-    margin: 0 10px;
-  }
-  .kertas {
-    margin: 0 10px;
-  }
-  .batu {
-    margin: 0 10px;
+  li {
+    font-size: 20px;
   }
 }
