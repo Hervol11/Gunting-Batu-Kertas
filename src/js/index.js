@@ -105,6 +105,9 @@ function kertas() {
 }
 
 function lagi() {
+  hasil.textContent = "AYO COBA LAGI"
+  reset.style.display = "none";
+
   jurus1.style.display = "block";
   jurus2.style.display = "block";
   jurus3.style.display = "block";
